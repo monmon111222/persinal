@@ -1,13 +1,11 @@
 <template>
   <div id="app">
-    <div id="nav" :class="{ sidebarOpen: sidebarOpen, sidebarClose: !sidebarOpen }">
+    <!-- <div id="nav" :class="{ sidebarOpen: sidebarOpen, sidebarClose: !sidebarOpen }">
       <b-button @click="controlSidebar" id="sidebarToggle"><i class="fa fa-list"></i></b-button>
-    </div>
+    </div> -->
     <div id="content" :class="{ sidebarOpen: sidebarOpen, sidebarClose: !sidebarOpen }">
-      <p style="color:#ffffff">
-        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-        in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-      </p>
+      <b-button @click="controlSidebar" id="sidebarToggle"><i class="fa fa-list"></i></b-button>
+      <router-view/>
     </div>
     <b-sidebar id="sidebar" no-close-on-route-change=false v-model="sidebarOpen" z-index=50>
       <div style="padding-top:20%;">
@@ -20,7 +18,6 @@
         </ul>
       </div>
     </b-sidebar>
-    <router-view/>
   </div>
 </template>
 <script>
@@ -30,6 +27,7 @@ export default {
   name: 'Home',
   data () {
     return {
+      windowHeight: window.innerHeight,
       sidebarOpen: true,
       menu: [
         {
@@ -76,6 +74,13 @@ export default {
 }
 #content {
   transition: width 0.1s linear 0.1s;
+  height: 100%;
+  position: relative;
+  #sidebarToggle {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
 }
 #nav {
   transition: width 0.1s linear 0.1s;
@@ -130,12 +135,10 @@ export default {
   width: calc(100% - 320px);
   margin-left: 320px;
   background-color: #7eccc2;
-  border: #2c3e50 1px solid;
 }
 .sidebarClose {
   width: calc(100%);
-  background-color: #2c3e50;
-  border: #ffffff 1px solid;
+  background-color: #7eccc2;
 }
 .close{
   display: none;

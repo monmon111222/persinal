@@ -1,5 +1,28 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div id="about">
   </div>
 </template>
+<script>
+export default {
+  name: 'Home',
+  data () {
+    return {
+      windowHeight: window.innerHeight
+    }
+  },
+  methods: {
+    controlSidebar () {
+      this.sidebarOpen = !this.sidebarOpen
+      if (!this.sidebarOpen) {
+        this.isSidebarOpen()
+      }
+    }
+  }
+}
+</script>
+<style lang="scss">
+#about {
+  height: 625px;
+  background: url('~@/assets/bg.png') center center no-repeat;
+}
+</style>
