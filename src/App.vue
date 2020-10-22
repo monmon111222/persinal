@@ -1,13 +1,71 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="nav" :class="{ sidebarOpen: sidebarOpen, sidebarClose: !sidebarOpen }">
+      <b-button @click="controlSidebar" id="sidebarToggle"><i class="fa fa-list"></i></b-button>
     </div>
+    <div id="content" :class="{ sidebarOpen: sidebarOpen, sidebarClose: !sidebarOpen }">
+      <p style="color:#ffffff">
+        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
+        in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+      </p>
+    </div>
+    <b-sidebar id="sidebar" no-close-on-route-change=false v-model="sidebarOpen" z-index=50>
+      <div style="padding-top:20%;">
+        <div id="logo"></div>
+        <ul>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/about">Education</router-link></li>
+          <li><router-link to="/about">Portfolio</router-link></li>
+          <li><router-link to="/about">Work Experience</router-link></li>
+        </ul>
+      </div>
+    </b-sidebar>
     <router-view/>
   </div>
 </template>
+<script>
+// @ is an alias to /src
 
+export default {
+  name: 'Home',
+  data () {
+    return {
+      sidebarOpen: true,
+      menu: [
+        {
+          header: true,
+          title: 'Main Navigation',
+          hiddenOnCollapse: true
+        },
+        {
+          href: '/',
+          title: 'Dashboard',
+          icon: 'fa fa-user'
+        },
+        {
+          href: '/about',
+          title: 'about',
+          icon: 'fa fa-sort-up',
+          child: [
+            {
+              href: '/charts/sublink',
+              title: 'Sub Link'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  methods: {
+    controlSidebar () {
+      this.sidebarOpen = !this.sidebarOpen
+      if (!this.sidebarOpen) {
+        this.isSidebarOpen()
+      }
+    }
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -16,10 +74,14 @@
   text-align: center;
   color: #2c3e50;
 }
-
+#content {
+  transition: width 0.1s linear 0.1s;
+}
 #nav {
-  padding: 30px;
-
+  transition: width 0.1s linear 0.1s;
+  padding-top: 30px;
+  height: 60px;
+  position: relative;
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -28,5 +90,54 @@
       color: #42b983;
     }
   }
+  #sidebarToggle {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+}
+#sidebar {
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #4E7093;
+    }
+  }
+  ul li{
+    list-style-type:none;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  li{
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  #logo {
+    width: 100px;
+    height: 100px;
+    background: url('~@/assets/logo.png') center center no-repeat;
+    background-size: 100px auto;
+    border-radius: 50% !important;
+    margin-bottom: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.sidebarOpen {
+  width: calc(100% - 320px);
+  margin-left: 320px;
+  background-color: #7eccc2;
+  border: #2c3e50 1px solid;
+}
+.sidebarClose {
+  width: calc(100%);
+  background-color: #2c3e50;
+  border: #ffffff 1px solid;
+}
+.close{
+  display: none;
 }
 </style>
