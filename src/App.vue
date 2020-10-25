@@ -3,18 +3,17 @@
     <!-- <div id="nav" :class="{ sidebarOpen: sidebarOpen, sidebarClose: !sidebarOpen }">
       <b-button @click="controlSidebar" id="sidebarToggle"><i class="fa fa-list"></i></b-button>
     </div> -->
-    <div id="content" :class="{ sidebarOpen: sidebarOpen, sidebarClose: !sidebarOpen }">
-      <b-button @click="controlSidebar" id="sidebarToggle"><i class="fa fa-list"></i></b-button>
+    <div id="page_view" class="sidebarOpen">
       <router-view/>
     </div>
-    <b-sidebar id="sidebar" no-close-on-route-change=false v-model="sidebarOpen" z-index=50>
+    <b-sidebar id="sidebar"  v-model="sidebarOpen" z-index=50 width="250px" :no-close-on-route-change="true">
       <div style="padding-top:20%;">
         <div id="logo"></div>
         <ul>
           <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/about">Education</router-link></li>
-          <li><router-link to="/about">Portfolio</router-link></li>
-          <li><router-link to="/about">Work Experience</router-link></li>
+          <li><router-link to="/education">Education</router-link></li>
+          <li><router-link to="/portfolio">Portfolio</router-link></li>
+          <li><router-link to="/workExperience">Work Experience</router-link></li>
         </ul>
       </div>
     </b-sidebar>
@@ -28,30 +27,7 @@ export default {
   data () {
     return {
       windowHeight: window.innerHeight,
-      sidebarOpen: true,
-      menu: [
-        {
-          header: true,
-          title: 'Main Navigation',
-          hiddenOnCollapse: true
-        },
-        {
-          href: '/',
-          title: 'Dashboard',
-          icon: 'fa fa-user'
-        },
-        {
-          href: '/about',
-          title: 'about',
-          icon: 'fa fa-sort-up',
-          child: [
-            {
-              href: '/charts/sublink',
-              title: 'Sub Link'
-            }
-          ]
-        }
-      ]
+      sidebarOpen: true
     }
   },
   methods: {
@@ -65,18 +41,33 @@ export default {
 }
 </script>
 <style lang="scss">
+@font-face {
+  font-family: 'leaguespartan-bold';
+  src: url('~@/assets/fonts/leaguespartan-bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'LeagueSpartan-Regular';
+  src: url('~@/assets/fonts/LeagueSpartan-Regular.woff') format('woff');
+}
+html,
+body {
+    height: 100%;
+    font-family: 'leaguespartan-bold';
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  height: inherit;
+  // font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
-#content {
+#page_view {
   transition: width 0.1s linear 0.1s;
   height: 100%;
   position: relative;
   #sidebarToggle {
+    z-index: 100;
     position: absolute;
     left: 10px;
     top: 10px;
@@ -96,6 +87,7 @@ export default {
     }
   }
   #sidebarToggle {
+    z-index: 100;
     position: absolute;
     left: 10px;
     top: 10px;
@@ -123,7 +115,7 @@ export default {
   #logo {
     width: 100px;
     height: 100px;
-    background: url('~@/assets/logo.png') center center no-repeat;
+    background: url('~@/assets/author.jpg') center center no-repeat;
     background-size: 100px auto;
     border-radius: 50% !important;
     margin-bottom: 20%;
@@ -132,12 +124,8 @@ export default {
   }
 }
 .sidebarOpen {
-  width: calc(100% - 320px);
-  margin-left: 320px;
-  background-color: #7eccc2;
-}
-.sidebarClose {
-  width: calc(100%);
+  width: calc(100% - 250px);
+  margin-left: 250px;
   background-color: #7eccc2;
 }
 .close{

@@ -1,5 +1,8 @@
 <template>
-  <div class="home">
+  <div id="home">
+    <video muted autoplay  id="myVideo">
+        <source src="../assets/bg.mp4" type="video/mp4">
+    </video>
   </div>
 </template>
 
@@ -10,30 +13,22 @@ export default {
   name: 'Home',
   data () {
     return {
-      menu: [
-        {
-          header: true,
-          title: 'Main Navigation',
-          hiddenOnCollapse: true
-        },
-        {
-          href: '/',
-          title: 'Dashboard',
-          icon: 'fa fa-user'
-        },
-        {
-          href: '/about',
-          title: 'Charts',
-          icon: 'fa fa-chart-area',
-          child: [
-            {
-              href: '/charts/sublink',
-              title: 'Sub Link'
-            }
-          ]
-        }
-      ]
     }
   }
 }
 </script>
+<style lang="scss">
+#home {
+  height: inherit;
+  // background: url('~@/assets/bg2.png') center center no-repeat;
+  // background-size: cover;
+}
+#myVideo {
+  width: inherit;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+</style>
