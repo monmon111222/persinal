@@ -1,8 +1,8 @@
 <template>
   <div id="home">
-    <video muted autoplay  id="myVideo">
-        <source src="../assets/bg.mp4" type="video/mp4">
-    </video>
+    <!-- <video muted autoplay  id="myVideo" webkit-playsinline playsinline>
+        <source src="../assets/bg.mp4" type="video/mp4" id="myVideoSrc">
+    </video> -->
   </div>
 </template>
 
@@ -17,11 +17,12 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style>
 #home {
   height: inherit;
-  // background: url('~@/assets/bg2.png') center center no-repeat;
-  // background-size: cover;
+  /* background-color: black; */
+  background: url('~@/assets/bg2.png') center center no-repeat;
+  /* background-size: cover; */
 }
 #myVideo {
   width: inherit;
@@ -30,5 +31,16 @@ export default {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+}
+#myVideoSrc {
+  src: '../assets/bg.mp4';
+  /* @media only screen and (max-device-width : 640px) {
+    src: '../assets/home_phone.mp4';
+  } */
+}
+@media only screen and (max-width: 600px) {
+  #myVideoSrc {
+    src: '../assets/home_phone.mp4';
+  }
 }
 </style>

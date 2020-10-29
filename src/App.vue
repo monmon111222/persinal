@@ -54,9 +54,17 @@ body {
     height: 100%;
     font-family: 'leaguespartan-bold';
 }
+@media only screen and (max-width: 600px) {
+  #sidebar {
+    display: none !important;
+  }
+  .sidebarOpen {
+  width: 100% !important;
+  margin-left: 0px !important;
+  }
+}
 #app {
   height: inherit;
-  // font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
