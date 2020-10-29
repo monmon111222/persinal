@@ -1,9 +1,9 @@
 <template>
   <div id="work_experience">
     <p style="color:#FFFFFF">this</p>
-    <video muted autoplay  id="myVideo">
+    <!-- <video muted autoplay  id="myVideo">
         <source src="../assets/work_experience.mp4" type="video/mp4">
-    </video>
+    </video> -->
     <div class="content">
       <h2>Advanced TEK International Corp</h2>
       <h3>Feb 2020 – May 2020</h3>

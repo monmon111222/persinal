@@ -1,5 +1,5 @@
 <template>
-  <div id="education">
+  <div class="education">
     <!-- <video muted autoplay  id="myVideo">
         <source src="../assets/education.mp4" type="video/mp4">
     </video> -->
@@ -8,7 +8,7 @@
       <h3>Sep 2016 - June 2020</h3>
       <h4>Bachelor of Information and Computer Science</h4>
       <div class="detail" style="display:flex;">
-        <div style="width: 50%;margin: auto 0 auto 10px;">
+        <div class="detail_text">
           <h5 style="text-align: left;"><i class="fa fa-check content_check"></i>School Activity - Leader of project team</h5>
           <div style="text-align: left;">
             <i class="fa fa-circle content_dot"></i>Delegated job to qualified members.<br>
@@ -21,49 +21,7 @@
             <a href="https://github.com/monmon111222/WinHouse_AndroidApp.git" class="content_link">Project Link</a>
           </h4>
         </div>
-        <div id="school_logo"/>
-      </div>
-    </div>
-    <div class="content">
-      <h2>Soochow University</h2>
-      <h3>Sep 2016 - June 2020</h3>
-      <h4>Bachelor of Information and Computer Science</h4>
-      <div class="detail" style="display:flex;">
-        <div style="width: 50%;margin: auto 0 auto 10px;">
-          <h5 style="text-align: left;"><i class="fa fa-check content_check"></i>School Activity - Leader of project team</h5>
-          <div style="text-align: left;">
-            <i class="fa fa-circle content_dot"></i>Delegated job to qualified members.<br>
-            <i class="fa fa-circle content_dot"></i>Established a timeline and recorded milestones.<br>
-            <i class="fa fa-circle content_dot"></i>Reported status of our project and outcome to professor.<br>
-            <i class="fa fa-circle content_dot"></i>Motivated members and help them when they had difficulty.
-          </div>
-          <h4 style="text-align: left;">
-            <i class="fa fa-file content_dot"></i>
-            <a href="https://github.com/monmon111222/WinHouse_AndroidApp.git" class="content_link">Project Link</a>
-          </h4>
-        </div>
-        <div id="school_logo"/>
-      </div>
-    </div>
-    <div class="content">
-      <h2>Soochow University</h2>
-      <h3>Sep 2016 - June 2020</h3>
-      <h4>Bachelor of Information and Computer Science</h4>
-      <div class="detail" style="display:flex;">
-        <div style="width: 50%;margin: auto 0 auto 10px;">
-          <h5 style="text-align: left;"><i class="fa fa-check content_check"></i>School Activity - Leader of project team</h5>
-          <div style="text-align: left;">
-            <i class="fa fa-circle content_dot"></i>Delegated job to qualified members.<br>
-            <i class="fa fa-circle content_dot"></i>Established a timeline and recorded milestones.<br>
-            <i class="fa fa-circle content_dot"></i>Reported status of our project and outcome to professor.<br>
-            <i class="fa fa-circle content_dot"></i>Motivated members and help them when they had difficulty.
-          </div>
-          <h4 style="text-align: left;">
-            <i class="fa fa-file content_dot"></i>
-            <a href="https://github.com/monmon111222/WinHouse_AndroidApp.git" class="content_link">Project Link</a>
-          </h4>
-        </div>
-        <div id="school_logo"/>
+        <!-- <div class="school_logo"/> -->
       </div>
     </div>
   </div>
@@ -73,21 +31,14 @@ export default {
   name: 'Home',
   data () {
     return {
-      windowHeight: window.innerHeight
     }
   },
   methods: {
-    controlSidebar () {
-      this.sidebarOpen = !this.sidebarOpen
-      if (!this.sidebarOpen) {
-        this.isSidebarOpen()
-      }
-    }
   }
 }
 </script>
 <style lang="scss">
-#education {
+.education {
   overflow-y: auto;
   height: inherit;
   background: url('~@/assets/education.gif') center center no-repeat;
@@ -96,7 +47,7 @@ export default {
   width: inherit;
 }
 @media only screen and (max-width: 600px) {
-  #education {
+  .education {
     background: url('~@/assets/education_phone.gif') center center no-repeat;
     background-size: 100% 100%;
   }
@@ -115,8 +66,14 @@ export default {
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 75%;
-  margin: 10% auto 10%;
+  margin: 10% auto;
   padding: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .content {
+    margin: 50% auto;
+    width: 90%;
+  }
 }
 .content_dot {
   font-size: x-small;
@@ -134,12 +91,17 @@ export default {
   color: #D4BFA1;
   font-size: medium;
 }
-#school_logo {
+.school_logo {
     width: 200px;
     height: 200px;
     background: url('~@/assets/Soochow_University_logo.svg.png') center center no-repeat;
-    background-size: 200px auto;
-    border-radius: 50% !important;
-    margin: 0 100px 0 auto;
+    background-size: contain;
+    margin: auto 0;
   }
+@media only screen and (max-width: 600px) {
+  .school_logo {
+    width: 100px;
+    height: 100px;
+  }
+}
 </style>

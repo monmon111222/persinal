@@ -1,9 +1,9 @@
 <template>
   <div id="portfolio">
     <p style="color:#FFFFFF">this</p>
-    <video muted autoplay  id="myVideo">
+    <!-- <video muted autoplay  id="myVideo">
         <source src="../assets/portfolio.mp4" type="video/mp4">
-    </video>
+    </video> -->
     <div class="content">
       <h2>Enterprise Information Portal</h2>
       <h3>2020 Sep - 2020 October</h3>
