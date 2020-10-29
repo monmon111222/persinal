@@ -1,8 +1,11 @@
 <template>
   <div class="education">
-    <!-- <video muted autoplay  id="myVideo">
-        <source src="../assets/education.mp4" type="video/mp4">
-    </video> -->
+    <div class="row col-12">
+      <div class="col-7"/>
+      <div class="title col-5">EDUCATION</div>
+      <div class="col-6"/>
+      <div class="title_line col-6"></div>
+    </div>
     <div class="content">
       <h2>Soochow University</h2>
       <h3>Sep 2016 - June 2020</h3>
@@ -21,7 +24,7 @@
             <a href="https://github.com/monmon111222/WinHouse_AndroidApp.git" class="content_link">Project Link</a>
           </h4>
         </div>
-        <!-- <div class="school_logo"/> -->
+        <div class="school_logo"/>
       </div>
     </div>
   </div>
@@ -41,7 +44,7 @@ export default {
 .education {
   overflow-y: auto;
   height: inherit;
-  background: url('~@/assets/education.gif') center center no-repeat;
+  background: url('~@/assets/bg.gif') center center no-repeat;
   background-size: 100% 100%;
   position: fixed;
   width: inherit;
@@ -52,12 +55,26 @@ export default {
     background-size: 100% 100%;
   }
 }
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+@keyframes lineColorChange {
+  from {border-top: transparent 6px dotted;}
+  to {border-top: #d4c0a2 6px dotted;}
+}
+@keyframes fontColorChange {
+  from {color: transparent;}
+  to {color: #737373;}
+}
+.title {
+  font-size: 90px;
+  color: #737373;
+  font-weight: 700;
+  text-align: right;
+  animation-name: fontColorChange;
+  animation-duration: 3.5s;
+}
+.title_line {
+  border-top: #d4c0a2 6px dotted;
+  animation-name: lineColorChange;
+  animation-duration: 3.5s;
 }
 .content {
   font-family: 'LeagueSpartan-Regular';
@@ -66,7 +83,7 @@ export default {
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 75%;
-  margin: 10% auto;
+  margin: 5% auto 0;
   padding: 10px;
 }
 @media only screen and (max-width: 600px) {
@@ -96,7 +113,7 @@ export default {
     height: 200px;
     background: url('~@/assets/Soochow_University_logo.svg.png') center center no-repeat;
     background-size: contain;
-    margin: auto 0;
+    margin: auto auto;
   }
 @media only screen and (max-width: 600px) {
   .school_logo {

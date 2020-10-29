@@ -1,9 +1,11 @@
 <template>
-  <div id="work_experience">
-    <p style="color:#FFFFFF">this</p>
-    <!-- <video muted autoplay  id="myVideo">
-        <source src="../assets/work_experience.mp4" type="video/mp4">
-    </video> -->
+  <div class="work_experience">
+    <div class="row col-12">
+      <div class="col-3"/>
+      <div class="title col-9">WORK EXPERIENCE</div>
+      <div class="col-3"/>
+      <div class="title_line col-9"></div>
+    </div>
     <div class="content">
       <h2>Advanced TEK International Corp</h2>
       <h3>Feb 2020 – May 2020</h3>
@@ -100,6 +102,9 @@ export default {
       windowHeight: window.innerHeight
     }
   },
+  created () {
+    console.log('we')
+  },
   methods: {
     controlSidebar () {
       this.sidebarOpen = !this.sidebarOpen
@@ -111,17 +116,40 @@ export default {
 }
 </script>
 <style lang="scss">
-#work_experience {
+.work_experience {
+  overflow-y: auto;
   height: inherit;
-  background: url('~@/assets/bg2.png') center center no-repeat;
-  // background-size: cover;
-}
-#myVideo {
+  background: url('~@/assets/bg.gif') center center no-repeat;
+  background-size: 100% 100%;
   position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: inherit;
+}
+@media only screen and (max-width: 600px) {
+  .work_experience {
+    background: url('~@/assets/work_experience_phone.gif') center center no-repeat;
+    background-size: 100% 100%;
+  }
+}
+@keyframes lineColorChange {
+  from {border-top: transparent 6px dotted;}
+  to {border-top: #d4c0a2 6px dotted;}
+}
+@keyframes fontColorChange {
+  from {color: transparent;}
+  to {color: #737373;}
+}
+.title {
+  font-size: 90px;
+  color: #737373;
+  font-weight: 700;
+  text-align: right;
+  animation-name: fontColorChange;
+  animation-duration: 3.5s;
+}
+.title_line {
+  border-top: #d4c0a2 6px dotted;
+  animation-name: lineColorChange;
+  animation-duration: 3.5s;
 }
 .content {
   font-family: 'LeagueSpartan-Regular';
@@ -130,8 +158,14 @@ export default {
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 75%;
-  margin: 10% auto 10%;
+  margin: 5% auto 0;
   padding: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .content {
+    margin: 50% auto;
+    width: 90%;
+  }
 }
 .content_dot {
   font-size: x-small;
@@ -149,12 +183,4 @@ export default {
   color: #D4BFA1;
   font-size: medium;
 }
-#school_logo {
-    width: 200px;
-    height: 200px;
-    background: url('~@/assets/Soochow_University_logo.svg.png') center center no-repeat;
-    background-size: 200px auto;
-    border-radius: 50% !important;
-    margin: 0 100px 0 auto;
-  }
 </style>

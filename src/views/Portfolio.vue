@@ -1,14 +1,16 @@
 <template>
-  <div id="portfolio">
-    <p style="color:#FFFFFF">this</p>
-    <!-- <video muted autoplay  id="myVideo">
-        <source src="../assets/portfolio.mp4" type="video/mp4">
-    </video> -->
+  <div class="portfolio">
+    <div class="row col-12">
+      <div class="col-7"/>
+      <div class="title col-5">PORTFOLIO</div>
+      <div class="col-6"/>
+      <div class="title_line col-6"></div>
+    </div>
     <div class="content">
-      <h2>Enterprise Information Portal</h2>
+      <h2>Customer Relationship Management Web</h2>
       <h3>2020 Sep - 2020 October</h3>
       <div class="detail" style="display:flex;">
-        <div style="margin: auto 0 auto 10px;">
+        <div class="detail_text">
           <h5 style="text-align: left;"><i class="fa fa-check content_check"></i>Front-End Developer &amp; Back-End Developer</h5>
           <div style="text-align: left;">
             <i class="fa fa-circle content_dot"></i>Determined the structure and design of web pages.<br>
@@ -16,16 +18,41 @@
           </div>
           <h4 style="text-align: left;">
             <i class="fa fa-file content_dot"></i>
-            <a href="https://github.com/monmon111222/WinHouse_AndroidApp.git" class="content_link">Project Link</a>
+            <a href="https://drive.google.com/file/d/1nEs7PaTnC_8T7M8bQngnzpw1xhL-26qt/view?usp=sharing" class="content_link">Project Introduction Link</a>
           </h4>
         </div>
+      </div>
+      <div>
+        <b-carousel v-model="slide" :interval="4000" controls indicators background="#ababab" img-height="480"
+          style="text-shadow: 1px 1px 2px #333;"  @sliding-start="onSlideStart" @sliding-end="onSlideEnd" img-width="1024" >
+          <b-carousel-slide  caption="Login Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/yfy_login.png" style="width:inherit;height:inherit;">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="View Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/yfy_prod_invest.png">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="Edit Page ">
+            <template #img>
+              <img src="~@/assets/portfolioPic/yfy_prod_invest_edit.png">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="View Detail Dialog">
+            <template #img>
+              <img src="~@/assets/portfolioPic/yfy_prod_invest_pop.png">
+            </template>
+          </b-carousel-slide>
+        </b-carousel>
       </div>
     </div>
     <div class="content">
       <h2>Enterprise Information Portal</h2>
       <h3>2020 July - 2020 October</h3>
       <div class="detail" style="display:flex;">
-        <div style="margin: auto 0 auto 10px;">
+        <div class="detail_text">
           <h5 style="text-align: left;"><i class="fa fa-check content_check"></i>Front-End Developer &amp;  Back-End Developer</h5>
           <div style="text-align: left;">
             <i class="fa fa-circle content_dot"></i>Wrote system analysis documents.<br>
@@ -36,17 +63,51 @@
           </div>
           <h4 style="text-align: left;">
             <i class="fa fa-file content_dot"></i>
-            <a href="https://github.com/monmon111222/WinHouse_AndroidApp.git" class="content_link">Project Link</a>
+            <a href="https://drive.google.com/file/d/1LJrovszs28JqD8n7YfRXPJnYYY9BR2gM/view" class="content_link">Project Introduction Link</a>
           </h4>
         </div>
-        <!-- <div id="school_logo"/> -->
+      </div>
+      <div>
+        <b-carousel v-model="slide" :interval="4000" controls indicators background="#ababab" img-height="480"
+          style="text-shadow: 1px 1px 2px #333;"  @sliding-start="onSlideStart" @sliding-end="onSlideEnd" img-width="1024" >
+          <b-carousel-slide  caption="Login Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/ykkap_login.png" style="width:inherit;height:inherit;">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="Home Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/ykkap_eip.png">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="Apply Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/change_contact_apply.png">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="Apply Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/change_contact_apply2.png">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="Process">
+            <template #img>
+              <img src="~@/assets/portfolioPic/change_contact_process.png">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="Popup Combol Dialog">
+            <template #img>
+              <img src="~@/assets/portfolioPic/change_contact_combol.png">
+            </template>
+          </b-carousel-slide>
+        </b-carousel>
       </div>
     </div>
     <div class="content">
       <h2>Authority Management Website</h2>
       <h3>2020 June</h3>
       <div class="detail" style="display:flex;">
-        <div style="margin: auto 0 auto 10px;">
+        <div class="detail_text">
           <h5 style="text-align: left;"><i class="fa fa-check content_check"></i>Front-End Developer</h5>
           <div style="text-align: left;">
             <i class="fa fa-circle content_dot"></i>Determined the structure and design of web pages.<br>
@@ -54,10 +115,44 @@
           </div>
           <h4 style="text-align: left;">
             <i class="fa fa-file content_dot"></i>
-            <a href="https://github.com/monmon111222/WinHouse_AndroidApp.git" class="content_link">Project Link</a>
+            <a href="https://drive.google.com/file/d/1YOi_ezktQfzk-l60mbk2fZJ16X4CV9th/view" class="content_link">Project Introduction Link</a>
           </h4>
         </div>
-        <!-- <div id="school_logo"/> -->
+      </div>
+      <div>
+        <b-carousel v-model="slide" :interval="4000" controls indicators background="#ababab" img-height="480"
+          style="text-shadow: 1px 1px 2px #333;"  @sliding-start="onSlideStart" @sliding-end="onSlideEnd" img-width="1024" >
+          <b-carousel-slide  caption="Login Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/ykkap_login.png" style="width:inherit;height:inherit;">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="Home Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/ykkap_eip.png">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="System Management Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/auth_system_mag.png">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="Application Management Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/auth_app_mag.png">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="Menu Management Page">
+            <template #img>
+              <img src="~@/assets/portfolioPic/auth_menu_mag.png">
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide  caption="Add Member Dialog">
+            <template #img>
+              <img src="~@/assets/portfolioPic/auth_add_member.png">
+            </template>
+          </b-carousel-slide>
+        </b-carousel>
       </div>
     </div>
   </div>
@@ -67,7 +162,8 @@ export default {
   name: 'Home',
   data () {
     return {
-      windowHeight: window.innerHeight
+      slide: 0,
+      sliding: null
     }
   },
   methods: {
@@ -81,17 +177,40 @@ export default {
 }
 </script>
 <style lang="scss">
-#portfolio {
+.portfolio {
+  overflow-y: auto;
   height: inherit;
-  background: url('~@/assets/bg2.png') center center no-repeat;
-  // background-size: cover;
-}
-#myVideo {
+  background: url('~@/assets/bg.gif') center center no-repeat;
+  background-size: 100% 100%;
   position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: inherit;
+}
+@media only screen and (max-width: 600px) {
+  .portfolio {
+    background: url('~@/assets/portfolio_phone.gif') center center no-repeat;
+    background-size: 100% 100%;
+  }
+}
+@keyframes lineColorChange {
+  from {border-top: transparent 6px dotted;}
+  to {border-top: #d4c0a2 6px dotted;}
+}
+@keyframes fontColorChange {
+  from {color: transparent;}
+  to {color: #737373;}
+}
+.title {
+  font-size: 90px;
+  color: #737373;
+  font-weight: 700;
+  text-align: right;
+  animation-name: fontColorChange;
+  animation-duration: 3.5s;
+}
+.title_line {
+  border-top: #d4c0a2 6px dotted;
+  animation-name: lineColorChange;
+  animation-duration: 3.5s;
 }
 .content {
   font-family: 'LeagueSpartan-Regular';
@@ -100,8 +219,14 @@ export default {
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 75%;
-  margin: 10% auto 10%;
+  margin: 5% auto 0;
   padding: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .content {
+    margin: 50% auto;
+    width: 90%;
+  }
 }
 .content_dot {
   font-size: x-small;
@@ -119,12 +244,8 @@ export default {
   color: #D4BFA1;
   font-size: medium;
 }
-#school_logo {
-    width: 200px;
-    height: 200px;
-    background: url('~@/assets/Soochow_University_logo.svg.png') center center no-repeat;
-    background-size: 200px auto;
-    border-radius: 50% !important;
-    margin: 0 100px 0 auto;
-  }
+.carousel > .carousel-inner > .carousel-item > img {
+  height: inherit;
+  width: inherit;
+}
 </style>

@@ -1,8 +1,5 @@
 <template>
-  <div id="home">
-    <!-- <video muted autoplay  id="myVideo" webkit-playsinline playsinline>
-        <source src="../assets/bg.mp4" type="video/mp4" id="myVideoSrc">
-    </video> -->
+  <div class="home">
   </div>
 </template>
 
@@ -18,29 +15,18 @@ export default {
 }
 </script>
 <style>
-#home {
+.home {
+  overflow-y: auto;
   height: inherit;
-  /* background-color: black; */
-  background: url('~@/assets/bg2.png') center center no-repeat;
-  /* background-size: cover; */
-}
-#myVideo {
-  width: inherit;
+  background: url('~@/assets/home.gif') center center no-repeat;
+  background-size: 100% 100%;
   position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-#myVideoSrc {
-  src: '../assets/bg.mp4';
-  /* @media only screen and (max-device-width : 640px) {
-    src: '../assets/home_phone.mp4';
-  } */
+  width: inherit;
 }
 @media only screen and (max-width: 600px) {
-  #myVideoSrc {
-    src: '../assets/home_phone.mp4';
+  .home {
+    background: url('~@/assets/home_phone.gif') center center no-repeat;
+    background-size: 100% 100%;
   }
 }
 </style>
