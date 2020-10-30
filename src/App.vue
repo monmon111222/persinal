@@ -6,7 +6,7 @@
     <div id="page_view" class="sidebarOpen">
       <router-view/>
     </div>
-    <b-sidebar id="sidebar"  v-model="sidebarOpen" z-index=50 width="250px" :no-close-on-route-change="true">
+    <b-sidebar id="sidebar"  v-model="sidebarOpen" z-index=50 width="15%" :no-close-on-route-change="true">
       <div style="padding-top:20%;">
         <div id="logo"></div>
         <ul>
@@ -14,6 +14,7 @@
           <li><router-link to="/education">Education</router-link></li>
           <li><router-link to="/portfolio">Portfolio</router-link></li>
           <li><router-link to="/workExperience">Work Experience</router-link></li>
+          <li><router-link to="/resume">Resume</router-link></li>
         </ul>
       </div>
     </b-sidebar>
@@ -132,8 +133,8 @@ body {
   }
 }
 .sidebarOpen {
-  width: calc(100% - 250px);
-  margin-left: 250px;
+  width: calc(100% - 15%);
+  margin-left: 15%;
   background-color: #7eccc2;
 }
 .close{

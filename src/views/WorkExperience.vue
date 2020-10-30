@@ -1,5 +1,5 @@
 <template>
-  <div class="work_experience">
+  <div class="page_content">
     <div class="row col-12">
       <div class="col-3"/>
       <div class="title col-9">WORK EXPERIENCE</div>
@@ -116,71 +116,4 @@ export default {
 }
 </script>
 <style lang="scss">
-.work_experience {
-  overflow-y: auto;
-  height: inherit;
-  background: url('~@/assets/bg.gif') center center no-repeat;
-  background-size: 100% 100%;
-  position: fixed;
-  width: inherit;
-}
-@media only screen and (max-width: 600px) {
-  .work_experience {
-    background: url('~@/assets/work_experience_phone.gif') center center no-repeat;
-    background-size: 100% 100%;
-  }
-}
-@keyframes lineColorChange {
-  from {border-top: transparent 6px dotted;}
-  to {border-top: #d4c0a2 6px dotted;}
-}
-@keyframes fontColorChange {
-  from {color: transparent;}
-  to {color: #737373;}
-}
-.title {
-  font-size: 90px;
-  color: #737373;
-  font-weight: 700;
-  text-align: right;
-  animation-name: fontColorChange;
-  animation-duration: 3.5s;
-}
-.title_line {
-  border-top: #d4c0a2 6px dotted;
-  animation-name: lineColorChange;
-  animation-duration: 3.5s;
-}
-.content {
-  font-family: 'LeagueSpartan-Regular';
-  position: relative;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 75%;
-  margin: 5% auto 0;
-  padding: 10px;
-}
-@media only screen and (max-width: 600px) {
-  .content {
-    margin: 50% auto;
-    width: 90%;
-  }
-}
-.content_dot {
-  font-size: x-small;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-.content_check {
-  margin-right: 10px;
-}
-.content_link {
-  color: #EBD1C1;
-  font-size: medium;
-}
-.content_link:hover {
-  color: #D4BFA1;
-  font-size: medium;
-}
 </style>
