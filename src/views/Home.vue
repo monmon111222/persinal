@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <img class="blue_line" src="~@/assets/blueline.png" style="position: absolute;transform: rotate(-90deg);top: 200px;left: -15%;"/>
   </div>
 </template>
 

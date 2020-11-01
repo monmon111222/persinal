@@ -1,10 +1,12 @@
 <template>
   <div class="page_content">
     <div class="row col-12">
-      <div class="col-3"/>
-      <div class="title col-9">WORK EXPERIENCE</div>
-      <div class="col-3"/>
-      <div class="title_line col-9"></div>
+      <div class="col-7"/>
+      <div class="title col-5">WORK</div>
+      <div class="col-7"/>
+      <div class="title col-5">EXPERIENCE</div>
+      <div class="col-6"/>
+      <div class="title_line col-6"></div>
     </div>
     <div class="content">
       <h2>Advanced TEK International Corp</h2>

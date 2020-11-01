@@ -4,6 +4,13 @@
       <b-button @click="controlSidebar" id="sidebarToggle"><i class="fa fa-list"></i></b-button>
     </div> -->
     <div id="page_view" class="sidebarOpen">
+      <div id="navbar">
+        <router-link to="/"><img src="https://img.icons8.com/bubbles/50/000000/home-page.png"/>Home</router-link>
+        <router-link to="/education"><img src="https://img.icons8.com/bubbles/50/000000/language.png"/>Education</router-link>
+        <router-link to="/portfolio"><img src="https://img.icons8.com/bubbles/50/000000/picture-in-picture.png"/>Portfolio</router-link>
+        <router-link to="/workExperience"><img src="https://img.icons8.com/bubbles/50/000000/work.png"/>Work</router-link>
+        <router-link to="/resume"><img src="https://img.icons8.com/bubbles/50/000000/single-page-mode.png"/>Resume</router-link>
+      </div>
       <router-view/>
     </div>
     <b-sidebar id="sidebar"  v-model="sidebarOpen" z-index=50 width="15%" :no-close-on-route-change="true">
@@ -62,6 +69,10 @@ body {
   .sidebarOpen {
   width: 100% !important;
   margin-left: 0px !important;
+  }
+  #navbar {
+    justify-content: center;
+    display: flex !important;
   }
 }
 #app {
@@ -130,6 +141,23 @@ body {
     margin-bottom: 20%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+#navbar {
+  display: none;
+  background: #F9FAFB;
+  a {
+    font-size: small;
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #4E7093;
+    }
+  }
+  img {
+    width: 25px;
+    height: 25px;
   }
 }
 .sidebarOpen {

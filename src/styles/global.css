@@ -10,6 +10,7 @@
     .page_content {
       background: url('~@/assets/bg_phone.gif') center center no-repeat;
       background-size: 100% 100%;
+      height: calc(100% - 25px);
     }
   }
   @keyframes lineColorChange {
@@ -43,6 +44,9 @@
     margin-right: 10px;
     margin-left: 10px;
   }
+  .content_logo {
+    margin: auto 5px;
+  }
   .content_check {
     margin-right: 10px;
   }
@@ -63,8 +67,7 @@
     }
   @media only screen and (max-width: 600px) {
     .school_logo {
-      width: 100px;
-      height: 100px;
+      display: none;
     }
   }
   .content {
@@ -79,7 +82,14 @@
   }
   @media only screen and (max-width: 600px) {
     .content {
-      margin: 50% auto;
+      margin: 10% auto 0% auto;
       width: 90%;
     }
+  }
+  .carousel > .carousel-inner > .carousel-item > img {
+    height: inherit;
+    width: inherit;
+  }
+  .blue_line {
+    src: '~@/assets/blueline.png'
   }
