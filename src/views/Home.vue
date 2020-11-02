@@ -1,6 +1,12 @@
 <template>
-  <div class="home">
-    <img class="blue_line" src="~@/assets/blueline.png" style="position: absolute;transform: rotate(-90deg);top: 200px;left: -15%;"/>
+  <div class="page_content">
+    <img class="blue_line_vertical" src="~@/assets/blueline.png"/>
+    <img class="yellow_line_vertical" src="~@/assets/yellowline.png"/>
+    <img class="pink_line_vertical" src="~@/assets/pinkline.png"/>
+    <div class="home_title">HI, I'M</div>
+    <div class="home_title2">BONNIE</div>
+    <div class="home_subtitle">FRONT-END DEVELOPER</div>
+    <img class="cloud" src="~@/assets/cloud.png"/>
   </div>
 </template>
 
@@ -15,18 +21,4 @@ export default {
 }
 </script>
 <style>
-.home {
-  overflow-y: auto;
-  height: inherit;
-  background: url('~@/assets/home.gif') center center no-repeat;
-  background-size: 100% 100%;
-  position: fixed;
-  width: inherit;
-}
-@media only screen and (max-width: 600px) {
-  .home {
-    background: url('~@/assets/home_phone.gif') center center no-repeat;
-    background-size: 100% 100%;
-  }
-}
 </style>

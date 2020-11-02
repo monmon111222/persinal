@@ -1,5 +1,8 @@
 <template>
   <div class="page_content">
+    <img class="blue_line_vertical" src="~@/assets/blueline.png"/>
+    <img class="yellow_line_vertical" src="~@/assets/yellowline.png"/>
+    <img class="pink_line_vertical" src="~@/assets/pinkline.png"/>
     <div class="row col-12">
       <div class="col-7"/>
       <div class="title col-5">RESUME</div>

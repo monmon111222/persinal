@@ -1,32 +1,75 @@
 .page_content {
     overflow-y: auto;
     height: inherit;
-    background: url('~@/assets/bg.gif') center center no-repeat;
+    background: url('~@/assets/bg2clear.gif') center center no-repeat;
     background-size: 100% 100%;
     position: fixed;
     width: inherit;
   }
   @media only screen and (max-width: 600px) {
     .page_content {
-      background: url('~@/assets/bg_phone.gif') center center no-repeat;
+      background: url('~@/assets/bgclear_phone.png') center center no-repeat;
       background-size: 100% 100%;
       height: calc(100% - 25px);
     }
   }
-  @keyframes lineColorChange {
+  @keyframes titleLineColorChange {
     from {border-top: transparent 6px dotted;}
     to {border-top: #d4c0a2 6px dotted;}
   }
-  @keyframes fontColorChange {
+  @keyframes fontGrayColorChange {
     from {color: transparent;}
     to {color: #737373;}
+  }
+  @keyframes fontWhiteColorChange {
+    from {color: transparent;}
+    to {color: #FFFFFF;}
+  }
+  .home_title {
+    position: absolute;
+    line-height: 0;
+    font-size: 80px;
+    color: #737373;
+    font-weight: 700;
+    text-align: right;
+    animation-name: fontGrayColorChange;
+    animation-duration: 3.5s;
+    top: 45%;
+    right: 0%;
+    z-index: 100;
+  }
+  .home_title2 {
+    position: absolute;
+    line-height: 0;
+    font-size: 80px;
+    color: #737373;
+    font-weight: 700;
+    text-align: right;
+    animation-name: fontGrayColorChange;
+    animation-duration: 3.5s;
+    top: 60%;
+    right: 0%;
+    z-index: 100;
+  }
+  .home_subtitle {
+    position: absolute;
+    line-height: 0;
+    font-size: 23px !important;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: right;
+    animation-name: fontWhiteColorChange;
+    animation-duration: 3.5s;
+    top: 70%;
+    right: 8%;
+    z-index: 100;
   }
   .title {
     font-size: 80px;
     color: #737373;
     font-weight: 700;
     text-align: right;
-    animation-name: fontColorChange;
+    animation-name: fontGrayColorChange;
     animation-duration: 3.5s;
   }
   @media only screen and (max-width: 600px) {
@@ -36,16 +79,137 @@
   }
   .title_line {
     border-top: #d4c0a2 6px dotted;
-    animation-name: lineColorChange;
+    animation-name: titleLineColorChange;
     animation-duration: 3.5s;
+  }
+  @keyframes blueLineAnimation {
+    from {top: 0px;}
+    to {top: 200px;}
+  }
+  @keyframes yellowLineAnimation {
+    from {top: 0px;}
+    to {top: 280px;}
+  }
+  @keyframes pinkLineAnimation {
+    from {top: 0px;}
+    to {top: 220px;}
+  }
+  @keyframes blueLineAnimationPhone {
+    from {top: 0px;}
+    to {top: 160px;}
+  }
+  @keyframes yellowLineAnimationPhone {
+    from {top: 0px;}
+    to {top: 176px;}
+  }
+  @keyframes pinkLineAnimationPhone {
+    from {top: 0px;}
+    to {top: 224px;}
+  }
+  .blue_line_vertical {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 200px;
+    left: -15%;
+    animation-name: blueLineAnimation;
+    animation-duration: 3.5s;
+  }
+  .yellow_line_vertical {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 280px;
+    left: -20%;
+    animation-name: yellowLineAnimation;
+    animation-duration: 3.5s;
+  }
+  .pink_line_vertical {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 220px;
+    left: -18%;
+    animation-name: pinkLineAnimation;
+    animation-duration: 3.5s;
+  }
+  .cloud {
+    position: absolute;
+    top: 220px;
+    right: 0%;
+    animation-name: pinkLineAnimation;
+    animation-duration: 3.5s;
+    z-index: 50;
+  }
+  @media only screen and (max-width: 600px) {
+    .blue_line_vertical {
+      width: 80%;
+      top: 160px;
+      animation-name: blueLineAnimationPhone;
+    }
+    .yellow_line_vertical {
+      width: 80%;
+      top: 176px;
+      animation-name: yellowLineAnimationPhone;
+    }
+    .pink_line_vertical {
+      width: 80%;
+      top: 224px;
+      animation-name: pinkLineAnimationPhone;
+    }
+    .cloud {
+      width: 60%;
+    }
+    .home_title {
+      top: 36%;
+      line-height: 0;
+      font-size: 30px;
+    }
+    .home_title2 {
+      top: 41%;
+      line-height: 0;
+      font-size: 30px;
+    }
+    .home_subtitle {
+      top: 48%;
+      line-height: 0;
+      font-size: 15px;
+    }
+  }
+  .detail_text {
+    float:left;
+    width:50%;
+  }
+  .detail_logo {
+    float:left;
+    width:50%;
+    justify-content: center;
+    display: flex;
+  }
+  .content_logo {
+    margin: auto 5px;
+    width: 50px;
+    height: 50px;
+  }
+  @media only screen and (max-width: 600px) {
+    .content_logo {
+      margin: 3px auto;
+      width: 20px;
+      height: 20px;
+    }
+    .detail_text {
+      float:left;
+      width:80%;
+    }
+    .detail_logo {
+      float:left;
+      width:20%;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
   }
   .content_dot {
     font-size: x-small;
     margin-right: 10px;
     margin-left: 10px;
-  }
-  .content_logo {
-    margin: auto 5px;
   }
   .content_check {
     margin-right: 10px;
@@ -89,7 +253,4 @@
   .carousel > .carousel-inner > .carousel-item > img {
     height: inherit;
     width: inherit;
-  }
-  .blue_line {
-    src: '~@/assets/blueline.png'
   }

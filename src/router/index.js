@@ -7,31 +7,31 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    meta: { title: 'Home' },
+    meta: { title: 'Bonnie | Front-end Developer' },
     component: () => import('../views/Home.vue')
   },
   {
     path: '/education',
     name: 'Education',
-    meta: { title: 'Education' },
+    meta: { title: 'Bonnie | Education' },
     component: () => import('../views/Education.vue')
   },
   {
     path: '/portfolio',
     name: 'Portfolio',
-    meta: { title: 'Portfolio' },
+    meta: { title: 'Bonnie | Portfolio' },
     component: () => import('../views/Portfolio.vue')
   },
   {
     path: '/workExperience',
     name: 'WorkExperience',
-    meta: { title: 'WorkExperience' },
+    meta: { title: 'Bonnie | WorkExperience' },
     component: () => import('../views/WorkExperience.vue')
   },
   {
     path: '/resume',
     name: 'Resume',
-    meta: { title: 'Resume' },
+    meta: { title: 'Bonnie | Resume' },
     component: () => import('../views/Resume.vue')
   }
 ]

@@ -1,5 +1,8 @@
 <template>
   <div class="page_content">
+    <img class="blue_line_vertical" src="~@/assets/blueline.png"/>
+    <img class="yellow_line_vertical" src="~@/assets/yellowline.png"/>
+    <img class="pink_line_vertical" src="~@/assets/pinkline.png"/>
     <div class="row col-12">
       <div class="col-7"/>
       <div class="title col-5">PORTFOLIO</div>
@@ -10,26 +13,26 @@
       <h2>Customer Relationship Management Web</h2>
       <h3>2020 Sep - 2020 October</h3>
       <div class="detail" style="display:flex;">
-        <div class="detail_text" style="float:left;width:50%;">
+        <div class="detail_text">
           <h5 style="text-align: left;"><i class="fa fa-check content_check"></i>Front-End Developer &amp; Back-End Developer</h5>
           <div style="text-align: left;">
             <i class="fa fa-circle content_dot"></i>Determined the structure and design of web pages.<br>
             <i class="fa fa-circle content_dot"></i>Concatenate APIs.<br>
           </div>
         </div>
-        <div class="detail_logo" style="float:left;width:50%;justify-content: center;display: flex;">
-          <img class="content_logo" src="~@/assets/vue.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/boostrap_vue.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/java.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/css.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/html.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/mysql.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/github.png" width="50px" height="50px"/>
+        <div class="detail_logo">
+          <img class="content_logo" src="~@/assets/vue.png"/>
+          <img class="content_logo" src="~@/assets/boostrap_vue.png"/>
+          <img class="content_logo" src="~@/assets/java.png"/>
+          <img class="content_logo" src="~@/assets/css.png"/>
+          <img class="content_logo" src="~@/assets/html.png"/>
+          <img class="content_logo" src="~@/assets/mysql.png"/>
+          <img class="content_logo" src="~@/assets/github.png"/>
         </div>
       </div>
       <div>
         <b-carousel v-model="slide" :interval="4000" controls indicators background="#ababab" img-height="480"
-          style="text-shadow: 1px 1px 2px #333;"  @sliding-start="onSlideStart" @sliding-end="onSlideEnd" img-width="1024" >
+          style="text-shadow: 1px 1px 2px #333;" img-width="1024" >
           <b-carousel-slide  caption="Login Page">
             <template #img>
               <img src="~@/assets/portfolioPic/yfy_login.png" style="width:inherit;height:inherit;">
@@ -57,7 +60,7 @@
       <h2>Enterprise Information Portal Web</h2>
       <h3>2020 July - 2020 October</h3>
       <div class="detail" style="display:flex;">
-        <div class="detail_text" style="float:left;width:50%;">
+        <div class="detail_text">
           <h5 style="text-align: left;"><i class="fa fa-check content_check"></i>Front-End Developer &amp;  Back-End Developer</h5>
           <div style="text-align: left;">
             <i class="fa fa-circle content_dot"></i>Wrote system analysis documents.<br>
@@ -67,19 +70,19 @@
             <i class="fa fa-circle content_dot"></i>Used Activiti BPMN 2.0 to design process which assign people to approve the application.<br>
           </div>
         </div>
-        <div class="detail_logo" style="float:left;width:50%;justify-content: center;display: flex;">
-          <img class="content_logo" src="~@/assets/vue.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/quasar.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/java.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/css.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/html.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/oracle_sql.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/github.png" width="50px" height="50px"/>
+        <div class="detail_logo">
+          <img class="content_logo" src="~@/assets/vue.png"/>
+          <img class="content_logo" src="~@/assets/quasar.png"/>
+          <img class="content_logo" src="~@/assets/java.png"/>
+          <img class="content_logo" src="~@/assets/css.png"/>
+          <img class="content_logo" src="~@/assets/html.png"/>
+          <img class="content_logo" src="~@/assets/oracle_sql.png"/>
+          <img class="content_logo" src="~@/assets/github.png"/>
         </div>
       </div>
       <div>
         <b-carousel v-model="slide" :interval="4000" controls indicators background="#ababab" img-height="480"
-          style="text-shadow: 1px 1px 2px #333;"  @sliding-start="onSlideStart" @sliding-end="onSlideEnd" img-width="1024" >
+          style="text-shadow: 1px 1px 2px #333;" img-width="1024" >
           <b-carousel-slide  caption="Login Page">
             <template #img>
               <img src="~@/assets/portfolioPic/ykkap_login.png" style="width:inherit;height:inherit;">
@@ -117,21 +120,21 @@
       <h2>Authority Management Web</h2>
       <h3>2020 June</h3>
       <div class="detail" style="display:flex;">
-        <div class="detail_text" style="float:left;width:50%;">
+        <div class="detail_text">
           <h5 style="text-align: left;"><i class="fa fa-check content_check"></i>Front-End Developer</h5>
           <div style="text-align: left;">
             <i class="fa fa-circle content_dot"></i>Determined the structure and design of web pages.<br>
             <i class="fa fa-circle content_dot"></i>Concatenate APIs.<br>
           </div>
         </div>
-        <div class="detail_logo" style="float:left;width:50%;justify-content: center;display: flex;">
-          <img class="content_logo" src="~@/assets/vue.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/quasar.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/java.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/css.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/html.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/oracle_sql.png" width="50px" height="50px"/>
-          <img class="content_logo" src="~@/assets/github.png" width="50px" height="50px"/>
+        <div class="detail_logo">
+          <img class="content_logo" src="~@/assets/vue.png"/>
+          <img class="content_logo" src="~@/assets/quasar.png"/>
+          <img class="content_logo" src="~@/assets/java.png"/>
+          <img class="content_logo" src="~@/assets/css.png"/>
+          <img class="content_logo" src="~@/assets/html.png"/>
+          <img class="content_logo" src="~@/assets/oracle_sql.png"/>
+          <img class="content_logo" src="~@/assets/github.png"/>
         </div>
       </div>
       <div>
