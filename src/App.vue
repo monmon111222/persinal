@@ -13,7 +13,7 @@
       </div>
       <router-view/>
     </div>
-    <b-sidebar id="sidebar"  v-model="sidebarOpen" z-index=50 width="15%" :no-close-on-route-change="true">
+    <b-sidebar id="sidebar"  v-model="sidebarOpen" z-index=50 width="240px" :no-close-on-route-change="true">
       <div style="padding-top:20%;">
         <div id="logo"></div>
         <ul>
@@ -62,7 +62,7 @@ body {
     height: 100%;
     font-family: 'leaguespartan-bold';
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   #sidebar {
     display: none !important;
   }
