@@ -12,15 +12,20 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/vue-fontawesome": "^2.0.0",
+    "animate": "^1.0.0",
+    "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.18.1",
     "core-js": "^3.6.5",
     "font-awesome": "^4.7.0",
+    "mobile-device-detect": "^0.4.3",
     "vue": "^2.6.12",
+    "vue-device-detector": "^1.1.6",
     "vue-pdf": "^4.2.0",
     "vue-router": "^3.2.0",
     "vue-sidebar-menu": "^4.7.3",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "wowjs": "^1.1.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

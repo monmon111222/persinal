@@ -41,6 +41,7 @@ const router = new VueRouter({
 })
 router.beforeEach((to, from, next) => {
   window.document.title = to.meta.title
+  document.documentElement.scrollTop = 0
   next()
 })
 export default router

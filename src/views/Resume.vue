@@ -1,34 +1,28 @@
 <template>
   <div class="page_content">
-    <img class="blue_line_vertical" src="~@/assets/blueline.png"/>
-    <img class="yellow_line_vertical" src="~@/assets/yellowline.png"/>
-    <img class="pink_line_vertical" src="~@/assets/pinkline.png"/>
-    <div class="row col-12">
-      <div class="col-7"/>
-      <div class="title col-5">RESUME</div>
-      <div class="col-6"/>
-      <div class="title_line col-6"></div>
+    <img class="blue_line_vertical" src="~@/assets/blueline.png" />
+    <img class="yellow_line_vertical" src="~@/assets/yellowline.png" />
+    <img class="pink_line_vertical" src="~@/assets/pinkline.png" />
+    <div class="page_title">
+      <div class="d-flex justify-content-end">
+        <div class="title">RESUME</div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <div class="title_line" style="width:40%;"></div>
+      </div>
     </div>
     <div class="content">
-      <pdf src="/resume.pdf"></pdf>
+      <img src="~@/assets/resume.png" style="width: 100%;height:100%" />
     </div>
   </div>
 </template>
 <script>
-import pdf from 'vue-pdf'
 export default {
   name: 'Home',
-  data () {
-    return {
-    }
+  data() {
+    return {}
   },
-  methods: {
-  },
-  components: {
-    pdf
-  }
+  methods: {}
 }
 </script>
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
